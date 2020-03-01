@@ -4,7 +4,6 @@
   "description": "a app that plans meals",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack",
     "build:js": "webpack --require @babel/register",
     "watch:js": "npm run build:js -- --watch --require @babel/register",
     "build:css": "node-sass src/sass/main.scss --output-style compressed public/main.min.css",
