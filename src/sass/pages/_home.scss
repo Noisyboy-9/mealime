@@ -6,6 +6,7 @@
     position: absolute;
     top: 20%;
     display: flex;
+    justify-content: space-between;
   }
 
   &__slogan {
@@ -13,5 +14,51 @@
   }
 
   &__icons {
+    display: flex;
+    flex-direction: row;
+
+    &--container {
+      width: 15rem;
+      height: 15rem;
+      background-color: white;
+      border-radius: 3.4rem;
+      transform: matrix(-0.71, 0.69, 0.72, 0.71, 0, 0);
+      position: relative;
+
+      &:not(:last-child) {
+        margin-right: 10rem;
+      }
+
+      &:last-child {
+        margin-right: 2rem;
+      }
+    }
+
+    &--text-container {
+      margin-top: 3rem;
+      margin-left: 4rem;
+    }
+  }
+
+  &__icon-wrapper {
+    width: 13rem;
+    height: 13rem;
+    border-radius: 50%;
+    @include absolute-center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--1 {
+      background-color: $color-primary;
+    }
+
+    &--2 {
+      background-color: $color-primary-dark;
+    }
+  }
+
+  &__icon {
+    transform: matrix(-0.71, 0.69, 0.72, 0.71, 0, 0);
   }
 }
