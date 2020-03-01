@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-
+  height: 100vh;
   &__content {
     padding: 4rem;
     position: absolute;
@@ -11,12 +11,14 @@
 
   &__slogan {
     width: 40%;
+    animation: move-in-right 0.7s ease-in-out;
   }
 
   &__icons {
     display: flex;
     flex-direction: row;
 
+    animation: move-in-left 0.7s ease-in-out;
     &--container {
       width: 15rem;
       height: 15rem;
@@ -60,5 +62,13 @@
 
   &__icon {
     transform: matrix(-0.71, 0.69, 0.72, 0.71, 0, 0);
+  }
+
+  &__phone {
+    position: absolute;
+    top: 100%;
+    left: 60%;
+
+    animation: move-in-bottom 0.7s ease-in-out;
   }
 }

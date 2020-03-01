@@ -50,8 +50,8 @@ module.exports = {
           loader: 'file-loader',
           options: {
             name: '[name].[ext]',
-            outputPath:'sass/vendors/fonts',
-            publicPath:'assest/fonts'
+            outputPath:'assets/fonts',
+            publicPath:'assets/fonts'
           }
         }
       },
@@ -61,8 +61,8 @@ module.exports = {
           loader: 'file-loader',
           options: {
             name: '[name].[ext]',
-            outputPath:'images',
-            publicPath:'assest/image'
+            outputPath:'assets/images',
+            publicPath:'assets/images'
           }
         }
       }

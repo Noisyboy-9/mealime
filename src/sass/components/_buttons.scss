@@ -1,0 +1,15 @@
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  border-radius: 6rem;
+  padding: 1.5rem 5rem;
+  &--primary {
+    background-color: $color-primary-dark;
+    color: $color-white;
+  }
+
+  &:hover {
+    @include button-hover-effect;
+  }
+}
