@@ -8,4 +8,8 @@
     background-color: $color-primary-dark;
     color: $color-white;
   }
+
+  &:hover {
+    @include button-hover-effect;
+  }
 }
