@@ -1,2 +1,38 @@
 @font-face {
+  font-family: "Lato";
+  src: url("/src/sass/vendors/fonts/Lato-Light.ttf") format(".ttf");
+  src: url("/src/sass/vendors/fonts/Lato-Thin.ttf") format(".ttf");
+  src: url("/src/sass/vendors/fonts/Lato-Regular.ttf") format(".ttf");
+  src: url("/src/sass/vendors/fonts/Lato-Bold.ttf") format(".ttf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/src/sass/vendors/fonts/Montserrat-Light.ttf") format(".ttf");
+  src: url("/src/sass/vendors/fonts/Montserrat-Thin.ttf") format(".ttf");
+  src: url("/src/sass/vendors/fonts/Montserrat-Regular.ttf") format(".ttf");
+}
+
+.heading-primary {
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: $color-white;
+}
+
+.heading-secondary {
+  font-size: 3.6rem;
+  font-weight: 300;
+  color: $text-color-gray-1;
+}
+
+.heading-tertiary {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: $text-color-gray-1;
+}
+
+.paragraph {
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: $text-color-gray-2;
 }
