@@ -63,4 +63,10 @@
   &__icon {
     transform: matrix(-0.71, 0.69, 0.72, 0.71, 0, 0);
   }
+
+  &__phone {
+    position: absolute;
+    top: 95%;
+    left: 60%;
+  }
 }

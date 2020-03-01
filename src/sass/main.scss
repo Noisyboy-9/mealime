@@ -1,15 +1,16 @@
 // abstracts
-@import 'abstracts/variables';
-@import 'abstracts/mixins';
-@import 'abstracts/animations';
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/animations";
 
 // basics
-@import 'basics/basic';
-@import 'basics/typography';
-@import 'basics/utilities';
+@import "basics/basic";
+@import "basics/typography";
+@import "basics/utilities";
 
 // components
-@import 'components/navigation';
+@import "components/navigation";
+@import "components/buttons";
 
 // pages
-@import 'pages/home';
+@import "pages/home";
