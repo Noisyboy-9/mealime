@@ -1,2 +1,17 @@
-.header {
+.hero {
+  position: relative;
+
+  &__content {
+    padding: 4rem;
+    position: absolute;
+    top: 20%;
+    display: flex;
+  }
+
+  &__slogan {
+    width: 40%;
+  }
+
+  &__icons {
+  }
 }
