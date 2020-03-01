@@ -1,12 +1,12 @@
 let path = require('path');
 let HtmlWebpackPlugin = require('html-webpack-plugin');
-let ExtractTextPlugin = require("extract-text-webpack-plugin");
+let ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   // basic  webpack init
   entry: './src/js/main.js',
 
-  mode: 'production',
+  mode: 'development',
 
   output: {
     path: path.resolve(__dirname, 'public'),
@@ -26,52 +26,44 @@ module.exports = {
           }
         }
       },
+
       {
-        test: /\.html$/,
-        use: 'html-loader'
+        test: /\.html$/i,
+        loader: 'html-loader',
+        options: {
+          minimize: true
+        }
       },
+
       {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: ['css-loader'],
+          fallback: 'style-loader',
+          use: ['css-loader']
         })
       },
+
       {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: ['css-loader' , 'sass-loader']
+          fallback: 'style-loader',
+          use: ['css-loader', 'sass-loader']
         })
-      },
-      {
-        test: /\.(ttf|woff2?)$/,
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]',
-            outputPath:'assets/fonts',
-            publicPath:'assets/fonts'
-          }
-        }
-      },
-      {
-        test: /\.(png|jpe?g|gif)$/,
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]',
-            outputPath:'assets/images',
-            publicPath:'assets/images'
-          }
-        }
       }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname , 'src/index.html')
+      template: path.resolve('src/index.html'),
+      filename: 'index.html',
+      minify: true
     }),
-    new ExtractTextPlugin('css/[name].css'),
-  ]
+
+    new ExtractTextPlugin('css/[name].css')
+  ],
+
+  watch: true,
+  watchOptions: {
+    ignored: /node_modules/
+  }
 };
