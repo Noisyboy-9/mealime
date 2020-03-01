@@ -11,13 +11,14 @@
 
   &__slogan {
     width: 40%;
-    animation: move-in-right 0.4s ease-out;
+    animation: move-in-right 0.7s ease-in-out;
   }
 
   &__icons {
     display: flex;
     flex-direction: row;
 
+    animation: move-in-left 0.7s ease-in-out;
     &--container {
       width: 15rem;
       height: 15rem;
