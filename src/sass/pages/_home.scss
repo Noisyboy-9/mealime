@@ -66,9 +66,14 @@
 
   &__phone {
     position: absolute;
-    top: 100%;
+    top: 80%;
     left: 60%;
 
     animation: move-in-bottom 0.7s ease-in-out;
   }
+}
+
+.home-main {
+  padding: 0rem 4rem;
+  margin-top: 25rem;
 }

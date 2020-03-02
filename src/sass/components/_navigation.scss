@@ -23,7 +23,7 @@
     }
 
     &::after {
-      content: '';
+      content: "";
       opacity: 0;
       display: block;
       width: 100%;
@@ -47,5 +47,6 @@
     text-decoration: none;
     color: $color-white;
     letter-spacing: 0.2rem;
+    font-family: "Lato";
   }
 }

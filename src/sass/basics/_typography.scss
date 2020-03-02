@@ -1,16 +1,16 @@
 @font-face {
-  font-family: 'Lato';
-  src: url('/src/sass/vendors/fonts/Lato-Light.ttf') format('.ttf');
-  src: url('/src/sass/vendors/fonts/Lato-Thin.ttf') format('.ttf');
-  src: url('/src/sass/vendors/fonts/Lato-Regular.ttf') format('.ttf');
-  src: url('/src/sass/vendors/fonts/Lato-Bold.ttf') format('.ttf');
+  font-family: "Lato";
+  src: url("/src/sass/vendors/fonts/Lato-Light.ttf") format(".ttf");
+  src: url("/src/sass/vendors/fonts/Lato-Thin.ttf") format(".ttf");
+  src: url("/src/sass/vendors/fonts/Lato-Regular.ttf") format(".ttf");
+  src: url("/src/sass/vendors/fonts/Lato-Bold.ttf") format(".ttf");
 }
 
 @font-face {
-  font-family: 'Montserrat';
-  src: url('/src/sass/vendors/fonts/Montserrat-Light.ttf') format('.ttf');
-  src: url('/src/sass/vendors/fonts/Montserrat-Thin.ttf') format('.ttf');
-  src: url('/src/sass/vendors/fonts/Montserrat-Regular.ttf') format('.ttf');
+  font-family: "Montserrat";
+  src: url("/src/sass/vendors/fonts/Montserrat-Light.ttf") format(".ttf");
+  src: url("/src/sass/vendors/fonts/Montserrat-Thin.ttf") format(".ttf");
+  src: url("/src/sass/vendors/fonts/Montserrat-Regular.ttf") format(".ttf");
 }
 
 .heading-primary {
@@ -18,6 +18,7 @@
   font-weight: normal;
   color: $color-white;
   line-height: 7rem;
+  font-family: "Lato";
 
   &--underline {
     display: inline-block;
@@ -40,6 +41,7 @@
 
   &--text-white {
     color: $color-white;
+    font-family: "Lato";
   }
 }
 
@@ -53,4 +55,5 @@
   font-size: 1.6rem;
   font-weight: lighter;
   color: $color-white;
+  font-family: "Lato";
 }
