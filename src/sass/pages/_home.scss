@@ -114,6 +114,7 @@
 .section-testimonial {
   background-image: url("/public/assets/images/testimonial__background.png");
   background-repeat: no-repeat;
+  background-size: cover;
   padding: 4rem;
 
   &__download-badge {
@@ -125,4 +126,71 @@
 
 .section-conditions {
   padding: 4rem;
+}
+
+.footer {
+  background-color: lighten($color-primary, 0.8);
+  &__content {
+    padding: 4rem;
+    display: flex;
+    background-color: lighten($color-primary, 0.8);
+  }
+
+  &__logo {
+    & > img {
+      border-radius: 1rem;
+    }
+  }
+
+  &-col {
+    flex: 1;
+    &:not(:first-child) {
+      margin-top: 4rem;
+    }
+  }
+
+  &__nav {
+    list-style: none;
+  }
+
+  &__item {
+    &:not(:first-child) {
+      margin-top: 1rem;
+    }
+
+    & > a {
+      color: $color-white;
+    }
+  }
+
+  &__follow-us {
+    &__container {
+      display: flex;
+    }
+
+    &__icon {
+      transition: all 0.2s ease-in-out;
+      &:not(:first-child) {
+        margin-left: 2rem;
+      }
+
+      &:hover {
+        transform: translateY(-0.5rem) scale(1.1);
+      }
+    }
+  }
+
+  &__coder {
+    font-size: 2.5rem;
+    color: $color-dark;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: darken($color-dark, 0.4);
+    }
+  }
+
+  &__coder-love {
+    margin-left: 1rem;
+  }
 }
