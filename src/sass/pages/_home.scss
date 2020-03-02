@@ -1,17 +1,54 @@
 .hero {
   position: relative;
   height: 100vh;
+
+  @media only screen and (max-width: 59.375em) {
+    background: linear-gradient(
+      to right,
+      $color-primary-light,
+      $color-primary-dark
+    );
+    height: 80vh;
+    border-radius: 4rem;
+
+    & img.hero__background {
+      display: none;
+    }
+  }
+
+  @include response(tab-land) {
+    height: 70vh;
+  }
+
+  @include response(tab-port) {
+    height: 60vh;
+  }
+
   &__content {
     padding: 4rem;
     position: absolute;
     top: 20%;
     display: flex;
     justify-content: space-between;
+
+    @media only screen and (max-width: 59.375em) {
+      position: relative;
+      width: 100%;
+      height: 50%;
+    }
   }
 
   &__slogan {
     width: 40%;
     animation: move-in-right 0.7s ease-in-out;
+
+    @media only screen and (max-width: 59.375em) {
+      width: 50%;
+      margin: auto;
+      text-align: center;
+      @include absolute-center;
+      animation: none;
+    }
   }
 
   &__icons {
@@ -27,6 +64,10 @@
       transform: matrix(-0.71, 0.69, 0.72, 0.71, 0, 0);
       position: relative;
 
+      @media only screen and (max-width: 59.375em) {
+        display: none;
+      }
+
       &:not(:last-child) {
         margin-right: 10rem;
       }
@@ -39,6 +80,10 @@
     &--text-container {
       margin-top: 3rem;
       margin-left: 4rem;
+
+      @media only screen and (max-width: 59.375em) {
+        display: none;
+      }
     }
   }
 
@@ -74,6 +119,123 @@
 }
 
 .home-main {
-  padding: 0rem 4rem;
-  margin-top: 25rem;
+  margin-top: 30rem;
+}
+
+.section-features {
+  padding: 0 4rem;
+}
+
+.section-pro {
+  background-color: $color-primary;
+  padding: 4rem;
+  border-radius: 6.5rem;
+}
+
+.section-privacy {
+  padding: 0 4rem;
+
+  .link {
+    font-size: 1.8rem;
+    text-decoration: underline;
+    font-family: 'Lato-Light';
+
+    &:hover {
+      color: darken($color-primary, 20);
+    }
+  }
+
+  &__more-information {
+    display: flex;
+
+    & > * {
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+.section-testimonial {
+  background-image: url('/public/assets/images/testimonial__background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 4rem;
+
+  &__download-badge {
+    & > img {
+      width: 25rem;
+    }
+  }
+}
+
+.section-conditions {
+  padding: 4rem;
+}
+
+.footer {
+  background-color: lighten($color-primary, 0.8);
+  &__content {
+    padding: 4rem;
+    display: flex;
+    background-color: lighten($color-primary, 0.8);
+  }
+
+  &__logo {
+    & > img {
+      border-radius: 1rem;
+    }
+  }
+
+  &-col {
+    flex: 1;
+    &:not(:first-child) {
+      margin-top: 4rem;
+    }
+  }
+
+  &__nav {
+    list-style: none;
+  }
+
+  &__item {
+    &:not(:first-child) {
+      margin-top: 1rem;
+    }
+
+    & > a {
+      color: $color-white;
+    }
+  }
+
+  &__follow-us {
+    &__container {
+      display: flex;
+    }
+
+    &__icon {
+      transition: all 0.2s ease-in-out;
+      &:not(:first-child) {
+        margin-left: 2rem;
+      }
+
+      &:hover {
+        transform: translateY(-0.5rem) scale(1.1);
+      }
+    }
+  }
+
+  &__coder {
+    font-size: 2.5rem;
+    color: $color-dark;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: darken($color-dark, 0.4);
+    }
+  }
+
+  &__coder-love {
+    margin-left: 1rem;
+  }
 }
