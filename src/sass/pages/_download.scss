@@ -1,28 +1,36 @@
 .hero--download {
   background-color: $color-primary;
   width: 100%;
-  height: 95rem;
-  border-bottom-left-radius: 13rem;
-  border-bottom-right-radius: 13rem;
+  height: 90rem;
+  border-bottom-left-radius: 10rem;
+  border-bottom-right-radius: 10rem;
 
   .hero__content {
     top: 15%;
+
+  }
+
+  .hero__slogan {
+    width: 50% !important;
+    h1 {
+      width: 70%;
+    }
   }
 
   &__description {
-    color: $color-white;
+    color: $color-white !important;
     margin-top: 3rem;
+    margin-left: 1rem;
     letter-spacing: 0.15rem;
     line-height: 3rem;
-    font-weight: lighter !important;
   }
 
   .google_play_btn {
-    margin-top: 2rem;
+    margin-top: 4rem;
     margin-left: .3rem;
     display: block;
     img {
-      width: 30rem;
+      width: 27rem;
       height: 10rem;
     }
   }
@@ -31,6 +39,87 @@
     position: absolute;
     right: 5%;
     top: 20%;
+    animation: move-in-left 0.7s ease-in-out;
+  }
+}
+
+.features {
+  width: 80%;
+  margin: -13rem auto;
+  background-color: $color-white;
+  border-radius: 3rem;
+  height: 68rem;
+  padding: 2rem;
+  box-shadow: 0 .4rem 1rem rgba(0,0,0, .4);
+  margin-bottom: 4rem;
+  position: relative;
+  text-align: center;
+
+  &__heading {
+    padding-top: 4.5rem;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin-top: 7rem;
+
+    .description {
+      width: 100%;
+      padding: .5rem 1.7rem;
+      margin-top: 4.3rem;
+      h3 {
+        font-size: 2.4rem;
+        color: $text-color-gray-1;
+        font-family: "Lato-Regular";
+      }
+      p {
+        margin-top: 3rem;
+      }
+    }
+
+    &--item-1 {
+
+    }
+
+    &--item-2 {
+
+    }
+
+    &--item-3 {
+
+    }
+
+  }
+  .rhombus {
+    width: 14.8rem;
+    height: 14.8rem;
+    border-radius: 3.4rem;
+    transform: rotate(45deg);
+    background-color: $color-primary-light;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:before {
+      content: '';
+      width: 13rem;
+      height: 13rem;
+      border-radius: 100%;
+      background-color: $color-white;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    svg {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
 
   }
 }
