@@ -4,6 +4,7 @@
   font-size: 2rem;
   border-radius: 6rem;
   padding: 1.5rem 5rem;
+  transition: 0.3s all ease-in-out;
   &--primary {
     background-color: $color-primary-dark;
     color: $color-white;
