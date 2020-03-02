@@ -1,0 +1,64 @@
+.testimonials-card {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  height: 20rem;
+  background-color: $color-primary;
+  border-radius: 3rem;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  &__profile {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 100%;
+    overflow: hidden;
+    margin-left: 1rem;
+  }
+
+  &__image {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 100%;
+  }
+
+  &__content {
+    position: relative;
+    width: 70%;
+    text-align: center;
+
+    p {
+      font-family: 'Lato-Light';
+    }
+    &::before {
+      content: url("/public/assets/images/quote-open_icon.svg");
+      display: block;
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+
+    &::after {
+      content: url("/public/assets/images/quote-close.svg");
+      display: block;
+      text-align: right;
+      margin-top: 2rem;
+    }
+  }
+
+  &__name {
+    margin-left: 1rem;
+    margin-right: 3rem;
+
+    span {
+      display: block;
+      font-family: 'Montserrat-Regular';
+      font-size: 1.8rem;
+      color: $color-white;
+    }
+  }
+}
