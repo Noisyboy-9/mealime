@@ -1,14 +1,40 @@
 .nav {
+  @include response(tab-port) {
+    &__logo {
+      margin: auto;
+      width: 25rem;
+      height: 10rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
   &__container {
     padding: 3rem 4rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include response(tab-land) {
+      margin-bottom: 20rem;
+    }
+
+    @include response(tab-port) {
+      display: block;
+      text-align: center;
+    }
   }
 
   &__list {
     display: flex;
+    @include response(tab-port) {
+      display: block;
+      text-align: center;
+    }
   }
 
   &__item {
@@ -23,7 +49,7 @@
     }
 
     &::after {
-      content: "";
+      content: '';
       opacity: 0;
       display: block;
       width: 100%;
@@ -47,6 +73,6 @@
     text-decoration: none;
     color: $color-white;
     letter-spacing: 0.2rem;
-    font-family: "Lato-Light";
+    font-family: 'Lato-Light';
   }
 }
