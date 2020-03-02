@@ -4,4 +4,33 @@
   height: 95rem;
   border-bottom-left-radius: 13rem;
   border-bottom-right-radius: 13rem;
+
+  .hero__content {
+    top: 15%;
+  }
+
+  &__description {
+    color: $color-white;
+    margin-top: 3rem;
+    letter-spacing: 0.15rem;
+    line-height: 3rem;
+    font-weight: lighter !important;
+  }
+
+  .google_play_btn {
+    margin-top: 2rem;
+    margin-left: .3rem;
+    display: block;
+    img {
+      width: 30rem;
+      height: 10rem;
+    }
+  }
+
+  &__phone {
+    position: absolute;
+    right: 5%;
+    top: 20%;
+
+  }
 }
