@@ -74,7 +74,52 @@
 }
 
 .home-main {
-  padding: 0rem 4rem;
-  margin-top: 25rem;
+  margin-top: 30rem;
+}
+
+.section-features {
+  padding: 0 4rem;
+}
+
+.section-pro {
+  background-color: $color-primary;
+  padding: 4rem;
+  border-radius: 6.5rem;
+}
+
+.section-privacy {
+  padding: 0 4rem;
+
+  .link {
+    font-size: 1.8rem;
+    text-decoration: underline;
+    font-family: "Lato-Light";
+
+    &:hover {
+      color: darken($color-primary, 20);
+    }
+  }
+
+  &__more-information {
+    display: flex;
+
+    & > * {
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+.section-testimonial {
+  background-image: url("/public/assets/images/testimonial__background.png");
+  background-repeat: no-repeat;
+  padding: 4rem;
+
+  &__download-badge {
+    & > img {
+      width: 25rem;
+    }
+  }
 }
 

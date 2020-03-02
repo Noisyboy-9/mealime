@@ -126,7 +126,136 @@
 
 .top--features {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 2fr 1fr;
   margin-top: 10rem;
+  margin-bottom: 4rem;
   padding: 0 4rem;
+  position: relative;
+  height: 115rem;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 4rem;
+    top: 0;
+    width: 80rem;
+    height: 80rem;
+    background-color: $color-primary;
+    border-radius: 100%;
+    margin-top: 10rem;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    z-index: 9;
+    position: relative;
+
+    .description {
+      width: 100%;
+      padding: .5rem 1.7rem;
+      margin-top: 4.3rem;
+      h3 {
+        font-size: 2.4rem;
+        color: $text-color-gray-1;
+        font-family: "Lato-Regular";
+      }
+      p {
+        margin-top: 3rem;
+      }
+
+    }
+
+    .rhombus {
+      width: 14.8rem;
+      height: 14.8rem;
+      border-radius: 3.4rem;
+      transform: rotate(45deg);
+      background-color: $color-primary-light;
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+
+      &:before {
+        content: '';
+        width: 13rem;
+        height: 13rem;
+        border-radius: 100%;
+        background-color: $color-white;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      svg {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+
+    }
+    &--1 {
+      background-color: $color-white;
+      width: 30rem;
+      border-radius: 2.5rem;
+      padding: 3rem 2rem 2rem 2rem;
+      box-shadow: 0 0 18px rgba(0,0,0, .4);
+      position: absolute;
+      left: 8%;
+      top: 0;
+    }
+    &--2 {
+      background-color: $color-white;
+      width: 30rem;
+      border-radius: 2.5rem;
+      padding: 3rem 2rem 2rem 2rem;
+      box-shadow: 0 0 18px rgba(0,0,0, .4);
+      position: absolute;
+      left: calc(10% + 30rem);
+      top: 14rem;
+    }
+    &--3 {
+      background-color: $color-white;
+      width: 30rem;
+      border-radius: 2.5rem;
+      padding: 3rem 2rem 2rem 2rem;
+      box-shadow: 0 0 18px rgba(0,0,0, .4);
+      position: absolute;
+      left: calc(10% + 30rem);
+      top: 63rem;
+    }
+    &--4 {
+      background-color: $color-white;
+      width: 30rem;
+      border-radius: 2.5rem;
+      padding: 3rem 2rem 2rem 2rem;
+      box-shadow: 0 0 18px rgba(0,0,0, .4);
+      position: absolute;
+      left: 8%;
+      top: 47rem;
+    }
+  }
+  &__text {
+    padding-top: 35rem;
+    text-align: center;
+
+    h1 {
+      color: $text-color-gray-1;
+      font-weight: bold;
+      letter-spacing: .15rem;
+    }
+
+    p {
+      margin-top: 2rem;
+    }
+  }
+}
+
+.plan {
+  h1 {
+    text-align: center;
+    color: $text-color-gray-1;
+  }
 }

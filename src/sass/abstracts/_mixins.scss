@@ -9,3 +9,13 @@
   transform: translateY(-0.3rem);
   box-shadow: 0.5rem 0.5rem 1.5rem rgba($color-dark, 0.65);
 }
+
+@mixin button-focus-effect {
+  transform: translateY(0rem);
+  box-shadow: 0.3rem 0.3rem 1rem rgba($color-dark, 0.75);
+}
+
+@mixin card-hover-effect {
+  transform: translateY(-1rem);
+  box-shadow: 0.5rem 0.5rem 1.5rem rgba($color-dark, 0.65);
+}
