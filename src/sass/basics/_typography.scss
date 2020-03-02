@@ -47,6 +47,10 @@
   color: $text-color-gray-1;
   font-family: "Montserrat-Thin";
   letter-spacing: 0.3rem;
+
+  &--white {
+    color: $color-white;
+  }
 }
 
 .heading-tertiary {
@@ -65,6 +69,11 @@
   font-size: 1.8rem;
   color: $text-color-gray-2;
   font-family: "Lato-Light";
+
+  &--white {
+    color: $color-white;
+    font-size: 2rem;
+  }
 }
 
 .text-lead {
