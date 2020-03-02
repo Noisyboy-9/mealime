@@ -1,31 +1,17 @@
 @font-face {
-  font-family: 'Lato-Light';
-  src: url('/public/assets/fonts/Lato-Light.ttf');
-}
-@font-face {
-  font-family: 'Lato-Thin';
-  src: url('/public/assets/fonts/Lato-Thin.ttf');
-}
-@font-face {
-  font-family: 'Lato-Regular';
-  src: url('/public/assets/fonts/Lato-Regular.ttf');
-}
-@font-face {
-  font-family: 'Lato-Bold';
-  src: url('/public/assets/fonts/Lato-Bold.ttf');
+  font-family: "Lato";
+  src: url("/src/sass/vendors/fonts/Lato-Light.ttf");
+  src: url("/src/sass/vendors/fonts/Lato-Thin.ttf");
+  src: url("/src/sass/vendors/fonts/Lato-Regular.ttf");
+  src: url("/src/sass/vendors/fonts/Lato-Bold.ttf");
 }
 
 @font-face {
-  font-family: 'Montserrat-Light';
-  src: url('/public/assets/fonts/Montserrat-Light.ttf');
-}
-@font-face {
-  font-family: 'Montserrat-Thin';
-  src: url('/public/assets/fonts/Montserrat-Thin.ttf');
-}
-@font-face {
-  font-family: 'Montserrat-Regular';
-  src: url('/public/assets/fonts/Montserrat-Regular.ttf');
+  font-family: "Montserrat";
+  src: url("/src/sass/vendors/fonts/Montserrat-Light.ttf");
+  src: url("/src/sass/vendors/fonts/Montserrat-Thin.ttf");
+  src: url("/src/sass/vendors/fonts/Montserrat-Regular.ttf");
+  src: url("/public/assets/fonts/Lato-Light.ttf");
 }
 
 .heading-primary {
@@ -33,7 +19,8 @@
   font-weight: normal;
   color: $color-white;
   line-height: 7rem;
-  font-family: 'Lato-bold';
+  font-weight: normal;
+  font-family: "Lato";
 
   &--underline {
     display: inline-block;
@@ -47,17 +34,19 @@
   font-size: 3.6rem;
   font-weight: 300;
   color: $text-color-gray-1;
-  font-family: 'Montserrat-Light';
+  font-family: "Montserrat";
 }
 
 .heading-tertiary {
   font-size: 2.6rem;
   font-weight: 600;
   color: $text-color-gray-1;
-  font-family: 'Lato-bold';
+  font-family: "Lato";
 
   &--text-white {
     color: $color-white;
+    font-family: "Lato";
+    font-weight: normal;
   }
 }
 
@@ -65,12 +54,12 @@
   font-size: 1.8rem;
   font-weight: 300;
   color: $text-color-gray-2;
-  font-family: 'Lato-Light';
+  font-family: "Lato";
 }
 
 .text-lead {
   font-size: 1.6rem;
   font-weight: lighter;
   color: $color-white;
-  font-family: 'Lato-Regular';
+  font-family: "Lato";
 }
