@@ -63,7 +63,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
-    margin-top: 7rem;
+    margin-top: 8rem;
 
     .description {
       width: 100%;
@@ -122,4 +122,11 @@
     }
 
   }
+}
+
+.top--features {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  margin-top: 10rem;
+  padding: 0 4rem;
 }
