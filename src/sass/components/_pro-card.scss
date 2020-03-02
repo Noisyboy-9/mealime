@@ -1,0 +1,23 @@
+.pro-card {
+  flex: 1 1;
+  background-color: $color-white;
+  padding: 3.7rem 2.1rem;
+  border-radius: 3.5rem;
+  &:not(:last-child) {
+    margin-right: 3rem;
+  }
+  &__container {
+    display: flex;
+  }
+
+  &__feature {
+    display: flex;
+    align-items: center;
+    & > img {
+      margin-right: 1rem;
+    }
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+}
