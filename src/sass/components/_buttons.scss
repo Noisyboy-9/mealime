@@ -36,4 +36,20 @@
       box-shadow: none;
     }
   }
+
+  &--white {
+    background-color: $color-white;
+    color: $color-primary;
+    font-size: 2rem;
+    padding: 1.5rem 10rem;
+    border-radius: 5rem;
+
+    &:hover {
+      @include button-hover-effect;
+    }
+
+    &:focus {
+      @include button-focus-effect;
+    }
+  }
 }
