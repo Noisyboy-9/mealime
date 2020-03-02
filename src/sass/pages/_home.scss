@@ -113,4 +113,12 @@
 
 .section-testimonial {
   background-image: url("/public/assets/images/testimonial__background.png");
+  background-repeat: no-repeat;
+  padding: 4rem;
+
+  &__download-badge {
+    & > img {
+      width: 25rem;
+    }
+  }
 }
