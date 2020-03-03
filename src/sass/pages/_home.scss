@@ -153,6 +153,10 @@
   background-color: $color-primary;
   padding: 4rem;
   border-radius: 6.5rem;
+
+  @include response(tab-port) {
+    text-align: center;
+  }
 }
 
 .section-privacy {
@@ -165,6 +169,10 @@
 
     &:hover {
       color: darken($color-primary, 20);
+    }
+
+    @include response(tab-port) {
+      text-align: center;
     }
   }
 
