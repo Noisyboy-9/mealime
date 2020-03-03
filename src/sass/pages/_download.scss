@@ -5,16 +5,13 @@
   border-bottom-left-radius: 10rem;
   border-bottom-right-radius: 10rem;
 
-  .hero__content {
-    top: 15%;
-
+  &__content {
+    padding-top: 17rem;
+    margin-left: 4rem;
   }
 
-  .hero__slogan {
+  &__slogan {
     width: 50% !important;
-    h1 {
-      width: 70%;
-    }
   }
 
   &__description {
@@ -36,6 +33,38 @@
     img {
       width: 34.8rem;
       height: 61.1rem;
+    }
+  }
+
+  @media only screen and (max-width: 59.375em) {
+    &__content {
+      padding-top: 17rem;
+    }
+  }
+  @include response(tab-land) {
+    &__content {
+      padding-top: 17rem;
+    }
+  }
+
+  @include response(tab-port) {
+    height: 110rem;
+
+    &__content {
+      padding-top: 23rem;
+      text-align: center;
+    }
+    &__slogan {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__phone {
+      display: none;
+    }
+
+    .google_play_btn {
+      margin-bottom: 5rem;
     }
   }
 }
@@ -70,6 +99,10 @@
   position: relative;
   text-align: center;
 
+  @include response(tab-port) {
+    height: 88rem;
+  }
+
   &__heading {
     padding-top: 4.5rem;
   }
@@ -92,18 +125,6 @@
       p {
         margin-top: 3rem;
       }
-    }
-
-    &--item-1 {
-
-    }
-
-    &--item-2 {
-
-    }
-
-    &--item-3 {
-
     }
 
   }
@@ -285,6 +306,25 @@
       margin-top: 2rem;
     }
   }
+
+  @include response(tab-port) {
+    display: block;
+    text-align: center;
+    margin-top: 40rem;
+    //padding-top: 2rem;
+
+    &:before {
+      left: -3rem;
+    }
+
+    &__text {
+      position: absolute;
+      top: -50%;
+      right: 50%;
+      transform: translateX(50%);
+
+    }
+  }
 }
 
 .plan {
@@ -306,6 +346,10 @@
     margin-top: 16rem;
     padding: 5rem 4rem 2rem 4rem;
     background-color: $color-white;
+
+    @include response(tab-port) {
+      margin-left: 0rem;
+    }
 
     h3 {
       text-align: center;
@@ -346,6 +390,12 @@
       margin-top: 4rem;
       a {
         font-family: 'Lato-Light';
+      }
+    }
+
+    @include response(tab-port) {
+      &--btn {
+        margin-left: 3rem;
       }
     }
   }
@@ -408,6 +458,12 @@
       margin-top: 4rem;
       a {
         font-family: 'Lato-Light';
+      }
+    }
+
+    @include response(tab-port) {
+      &--btn {
+        margin-left: 2rem;
       }
     }
 

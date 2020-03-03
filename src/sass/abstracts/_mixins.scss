@@ -19,3 +19,29 @@
   transform: translateY(-1rem);
   box-shadow: 0.5rem 0.5rem 1.5rem rgba($color-dark, 0.65);
 }
+
+@mixin response($breakpoint) {
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+}
