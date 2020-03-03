@@ -6,18 +6,6 @@
 
 html {
   font-size: 62.5%;
-
-  @include response(tab-land) {
-    font-size: 56.3%;
-  }
-
-  @include response(tab-port) {
-    font-size: 50%;
-  }
-
-  @include response(tab-land) {
-    font-size: 37.5%;
-  }
 }
 
 body {
