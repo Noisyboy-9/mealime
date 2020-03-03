@@ -3,11 +3,25 @@
   flex: 1;
   padding: 4rem;
   border-radius: 4rem;
+
   &:not(:last-child) {
     margin-right: 3rem;
+
+    @media only screen and (max-width: 50em) {
+      margin-right: auto;
+      margin-bottom: 4rem;
+    }
   }
   &__container {
     display: flex;
+
+    @media only screen and (max-width: 50em) {
+      display: block;
+    }
+
+    @media only screen and (max-width: 28.125em) {
+      width: 100%;
+    }
   }
 
   &__profile {
@@ -15,6 +29,11 @@
     width: 13rem;
     height: 13rem;
     margin-bottom: 5rem;
+
+    @include response(phone) {
+      width: 10rem;
+      height: 10rem;
+    }
   }
 
   &__image {
@@ -31,27 +50,46 @@
     font-size: 1.6rem;
     margin-left: 1rem;
     transition: 0.2s all ease-in-out;
+    text-align: center;
+    @include response(phone) {
+      width: 12rem;
+      margin-left: 0;
+    }
   }
 
   &:hover &__profile img {
     filter: brightness(60%) blur(4px);
+
+    @media only screen and (max-width: 50em) {
+      filter: none;
+    }
   }
 
   &:hover &__profile figcaption {
     transform: translateY(-8rem);
+    @media only screen and (max-width: 50em) {
+      transform: translateY(0);
+    }
   }
 
   &__content {
     position: relative;
     &::before {
-      content: url("/public/assets/images/quote-open_icon.svg");
+      @media only screen and (max-width: 28.125em) {
+        content: '';
+      }
+
+      content: url('/public/assets/images/quote-open_icon.svg');
       display: block;
       margin-bottom: 2rem;
       text-align: left;
     }
 
     &::after {
-      content: url("/public/assets/images/quote-close.svg");
+      @media only screen and (max-width: 28.125em) {
+        content: '';
+      }
+      content: url('/public/assets/images/quote-close.svg');
       display: block;
       text-align: right;
       margin-top: 2rem;

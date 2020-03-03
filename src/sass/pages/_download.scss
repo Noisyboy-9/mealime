@@ -5,6 +5,15 @@
   border-bottom-left-radius: 10rem;
   border-bottom-right-radius: 10rem;
 
+
+  @media only screen and(max-width:47.81em) {
+    height: 100rem;
+  }
+
+  @media only screen and(max-width:38.12em) {
+    height: 110rem;
+  }
+
   &__content {
     padding-top: 17rem;
     margin-left: 4rem;
@@ -12,6 +21,11 @@
 
   &__slogan {
     width: 50% !important;
+
+    @media only screen and(max-width:43.12em) {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   &__description {
@@ -20,6 +34,7 @@
     margin-left: 1rem;
     letter-spacing: 0.15rem;
     line-height: 3rem;
+
   }
 
 
@@ -30,41 +45,17 @@
     top: 20%;
     animation: move-in-left 0.7s ease-in-out;
 
-    img {
-      width: 34.8rem;
-      height: 61.1rem;
-    }
-  }
-
-  @media only screen and (max-width: 59.375em) {
-    &__content {
-      padding-top: 17rem;
-    }
-  }
-  @include response(tab-land) {
-    &__content {
-      padding-top: 17rem;
-    }
-  }
-
-  @include response(tab-port) {
-    height: 110rem;
-
-    &__content {
-      padding-top: 23rem;
-      text-align: center;
-    }
-    &__slogan {
-      margin-left: auto;
-      margin-right: auto;
+    @include response(tab-land) {
+      top: 13%;
     }
 
-    &__phone {
+    @media only screen and(max-width:43.12em) {
       display: none;
     }
 
-    .google_play_btn {
-      margin-bottom: 5rem;
+    img {
+      width: 34.8rem;
+      height: 61.1rem;
     }
   }
 }
@@ -85,6 +76,10 @@
     }
 
   }
+
+  @media only screen and(max-width:43.12em) {
+    text-align: center;
+  }
 }
 
 .features {
@@ -99,8 +94,12 @@
   position: relative;
   text-align: center;
 
-  @include response(tab-port) {
-    height: 88rem;
+  @media only screen and(max-width:47.81em) {
+    height: 125rem;
+  }
+
+  @media only screen and(max-width:40.81em) {
+    height: 135rem;
   }
 
   &__heading {
@@ -113,6 +112,10 @@
     grid-gap: 1rem;
     margin-top: 8rem;
 
+    @media only screen and(max-width:47.81em) {
+      display: block;
+    }
+
     .description {
       width: 100%;
       padding: .5rem 1.7rem;
@@ -124,6 +127,10 @@
       }
       p {
         margin-top: 3rem;
+
+        @media only screen and(max-width:47.81em) {
+          margin-bottom: 6rem;
+        }
       }
     }
 
@@ -174,6 +181,11 @@
   position: relative;
   height: 115rem;
 
+  @media only screen and(max-width:79.68em) {
+    display: block;
+    margin-top: 40rem;
+  }
+
   &:before {
     content: '';
     position: absolute;
@@ -184,6 +196,21 @@
     background-color: $color-primary;
     border-radius: 100%;
     margin-top: 10rem;
+
+
+    @include response(tab-land) {
+      left: 17rem;
+    }
+
+    @media only screen and(max-width:79.68em) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @media only screen and(max-width:44em) {
+      width: 70rem;
+      height: 70rem;
+    }
   }
 
   &__items {
@@ -191,6 +218,42 @@
     grid-template-columns: repeat(4, 1fr);
     z-index: 9;
     position: relative;
+
+
+    @include response(tab-land) {
+      margin-left: 13rem;
+    }
+
+    @media only screen and(max-width:79.68em) {
+      margin-left: 18%;
+      //margin-left: 17rem;
+    }
+
+    @media only screen and(max-width:70.68em) {
+      margin-left: 20%;
+    }
+
+
+
+    @media only screen and(max-width:68em) {
+      margin-left: 15%;
+    }
+
+    @media only screen and(max-width:55em) {
+      margin-left: 4%;
+    }
+
+    @media only screen and(max-width:44em) {
+      margin-left: 2%;
+    }
+
+    @media only screen and(max-width:39em) {
+      margin-left: -3%;
+    }
+
+    @media only screen and(max-width:35em) {
+      margin-left: -15%;
+    }
 
     .description {
       width: 100%;
@@ -204,7 +267,6 @@
       p {
         margin-top: 3rem;
       }
-
     }
 
     .rhombus {
@@ -227,6 +289,8 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+
+
       }
 
       .list {
@@ -260,6 +324,12 @@
       position: absolute;
       left: 8%;
       top: 0;
+
+      @media only screen and(max-width:44em) {
+        width: 25rem;
+        left: 10%;
+        top: -5rem;
+      }
     }
     &--2 {
       background-color: $color-white;
@@ -270,6 +340,12 @@
       position: absolute;
       left: calc(10% + 30rem);
       top: 14rem;
+
+      @media only screen and(max-width:44em) {
+        width: 25rem;
+        left: calc(4% + 30rem);
+        top: 7rem;
+      }
     }
     &--3 {
       background-color: $color-white;
@@ -280,6 +356,12 @@
       position: absolute;
       left: calc(10% + 30rem);
       top: 63rem;
+
+      @media only screen and(max-width:44em) {
+        width: 25rem;
+        left: calc(4% + 30rem);
+        top: 58rem;
+      }
     }
     &--4 {
       background-color: $color-white;
@@ -290,6 +372,12 @@
       position: absolute;
       left: 8%;
       top: 47rem;
+
+      @media only screen and(max-width:44em) {
+        width: 25rem;
+        left: 10%;
+        top: 42rem;
+      }
     }
   }
   &__text {
@@ -305,36 +393,52 @@
     p {
       margin-top: 2rem;
     }
-  }
 
-  @include response(tab-port) {
-    display: block;
-    text-align: center;
-    margin-top: 40rem;
-    //padding-top: 2rem;
+    @include response(tab-land) {
+      margin-left: -10rem;
+      width: 50rem;
 
-    &:before {
-      left: -3rem;
+      p {
+        font-size: 2.0rem;
+      }
     }
 
+    @media only screen and(max-width:61.56em) {
+      margin-left: 0;
+    }
+  }
+
+  @media only screen and(max-width:79.68em) {
     &__text {
       position: absolute;
-      top: -50%;
-      right: 50%;
-      transform: translateX(50%);
+      top: -60rem;
+      left: 50%;
+      transform: translateX(-50%);
 
+      h1 {
+        font-size: 3.6rem;
+      }
+      p {
+        font-size: 2.2rem;
+      }
     }
   }
 }
 
 .plan {
   margin-bottom: 15rem;
+
   h1 {
     text-align: center;
     color: $text-color-gray-1;
   }
   &__wrapper {
     display: flex;
+
+    @media only screen and(max-width:45em) {
+      display: block;
+    }
+
   }
 
   &__free {
@@ -347,10 +451,31 @@
     padding: 5rem 4rem 2rem 4rem;
     background-color: $color-white;
 
-    @include response(tab-port) {
-      margin-left: .5rem;
-      padding: 5rem 8rem 2rem 1rem;
+    @media only screen and(max-width:80em) {
+      margin-left: 15%;
     }
+
+    @include response(tab-land) {
+      //margin-left: 50rem;
+      margin-left: 10%;
+    }
+
+    @media only screen and(max-width:68.12em) {
+      margin-left: 7%;
+    }
+
+    @media only screen and(max-width:59.37em) {
+      margin-left: 3%;
+    }
+
+    @media only screen and(max-width:63.98em) {
+      padding-right: 10rem;
+    }
+
+    @media only screen and(max-width:51.25em) {
+      margin-left: 1%;
+    }
+
 
     h3 {
       text-align: center;
@@ -379,7 +504,7 @@
       p {
         margin-left: 4rem;
 
-        @include response(tab-port) {
+        @media only screen and(max-width:54.68em) {
           margin-left: 2rem;
         }
       }
@@ -398,11 +523,28 @@
       }
     }
 
-    @include response(tab-port) {
+    @media only screen and(max-width:45em) {
+      width: 65rem;
+      height: 73rem;
+      margin-left: auto;
+      margin-right: auto;
+
+      h3 {
+        font-size: 3.6rem;
+      }
+
+      p {
+        font-size: 2.2rem;
+      }
+
       &--btn {
-        margin-left: 3rem;
+        margin-left: 17rem;
+        a {
+          font-size: 2.9rem;
+        }
       }
     }
+
   }
 
   &__premium {
@@ -414,6 +556,12 @@
     margin-top: 8rem;
     padding: 5rem 4rem 2rem 4rem;
     background-color: $color-primary !important;
+
+    @media only screen and(max-width:45em) {
+      width: 65rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
     h3 {
       text-align: center;
@@ -466,10 +614,25 @@
       }
     }
 
-    @include response(tab-port) {
-      &--btn {
-        margin-left: 1rem;
+    @media only screen and(max-width:45em) {
+      width: 65rem;
+      height: 88rem;
+      margin-left: auto;
+      margin-right: auto;
 
+      h3 {
+        font-size: 3.6rem;
+      }
+
+      p {
+        font-size: 2.2rem;
+      }
+
+      .plan__free--btn {
+        margin-left: 10rem !important;
+        a {
+          font-size: 2.9rem;
+        }
       }
     }
 
@@ -485,6 +648,9 @@
     height: 100rem;
   }
 
+  @media only screen and(max-width:45em) {
+    height: 100rem;
+  }
 
   &__container {
     width: 95%;
@@ -507,11 +673,15 @@
   margin-bottom: 5rem;
   position: relative;
 
-  @include response(tab-port) {
+  @media only screen and(max-width:45em) {
     display: block;
     text-align: center;
-    margin-bottom: 10rem;
   }
+
+  @include response(tab-land) {
+    justify-items: center;
+  }
+
 
   &:before {
     content: '';
@@ -523,13 +693,26 @@
     height: 59rem;
     border-radius: 100%;
 
+    @include response(tab-land) {
+      right: 5rem;
+    }
+
+    @media only screen and(max-width:68em) {
+      right: 5rem;
+    }
+
     @include response(tab-port) {
-      top: 40rem;
-      right: 50%;
-      transform: translateX(50%);
-      z-index: 1;
+      right: 1rem;
+    }
+
+    @media only screen and(max-width:50em) {
+      right: -8rem;
+    }
+
+    @media only screen and(max-width:45em) {
       background-color: transparent;
     }
+
   }
 
 
@@ -539,11 +722,17 @@
     margin-top: -2rem;
     z-index: 2222;
 
-    @include response(tab-port) {
-      margin-right: 0;
-      margin-top: 10rem;
-
+    @include response(tab-land) {
+      top: 13%;
+      justify-self: center;
+      margin-left: 12rem;
     }
+
+    @media only screen and(max-width:45em) {
+      margin-top: 9rem;
+      margin-right: 12rem;
+    }
+
 
     img {
       width: 40rem;
@@ -559,6 +748,10 @@
       font-family: "Montserrat-Regular";
       font-weight: bold;
       margin-top: 2rem;
+    }
+
+    @media only screen and(max-width:45em) {
+      margin-left: 0;
     }
 
   }
