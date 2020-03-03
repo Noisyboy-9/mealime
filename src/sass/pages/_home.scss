@@ -193,6 +193,13 @@
   background-size: cover;
   padding: 4rem;
 
+  @media only screen and (max-width: 50em) {
+    text-align: center;
+  }
+
+  @media only screen and (max-width: 28.125em) {
+    padding: 2rem;
+  }
   &__download-badge {
     & > img {
       width: 25rem;
