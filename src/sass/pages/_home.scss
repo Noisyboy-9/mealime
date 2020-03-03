@@ -1,6 +1,15 @@
 .hero {
   position: relative;
   height: 100vh;
+
+  @media only screen and(max-width:68.75em) {
+    height: 80vh;
+  }
+
+  @media only screen and(max-width:62.5em) {
+    height: 70vh;
+  }
+
   @include response(tab-port) {
     background: linear-gradient(
       to right,
@@ -16,6 +25,13 @@
     }
   }
 
+  @media only screen and (max-width: 50em) {
+    height: 50vh;
+  }
+
+  @media only screen and (max-width: 48em) {
+    height: 60vh;
+  }
   @media only screen and (max-width: 43.75em) {
     height: 70vh;
   }
@@ -25,6 +41,7 @@
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
   }
+
   &__content {
     padding: 4rem;
     position: absolute;
@@ -112,10 +129,7 @@
     left: 60%;
 
     @media only screen and (max-width: 68.75em) {
-      img {
-        height: 40rem;
-        width: auto;
-      }
+      display: none;
     }
 
     @media only screen and (max-width: 62.5em) {
@@ -127,9 +141,18 @@
 
 .home-main {
   margin-top: 30rem;
+  @media only screen and (max-width: 100em) {
+    margin-top: 20rem;
+  }
+  @media only screen and (max-width: 93.75em) {
+    margin-top: 15rem;
+  }
+  @media only screen and (max-width: 87.5em) {
+    margin-top: 5rem;
+  }
 
   @media only screen and(max-width: 68.75em) {
-    margin-top: 10rem;
+    margin-top: 0rem;
   }
 
   @media only screen and(max-width: 62.5em) {
