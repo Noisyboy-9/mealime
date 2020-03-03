@@ -216,15 +216,40 @@
 
 .footer {
   background-color: lighten($color-primary, 0.8);
+  @include response(tab-land) {
+    &__app-logo {
+      display: none;
+    }
+  }
+
   &__content {
     padding: 4rem;
     display: flex;
     background-color: lighten($color-primary, 0.8);
+
+    @media only screen and (max-width: 50em) {
+      display: block;
+      text-align: center;
+    }
   }
 
   &__logo {
     & > img {
       border-radius: 1rem;
+
+      @include response(tab-land) {
+        height: 25rem;
+        width: auto;
+      }
+
+      @include response(tab-land) {
+        height: 20rem;
+        margin-top: 2rem;
+      }
+
+      @media only screen and (max-width: 50em) {
+        height: 25rem;
+      }
     }
   }
 
@@ -237,6 +262,10 @@
 
   &__nav {
     list-style: none;
+
+    @include response(tab-land) {
+      margin-top: 2rem;
+    }
   }
 
   &__item {
@@ -252,6 +281,10 @@
   &__follow-us {
     &__container {
       display: flex;
+
+      @media only screen and (max-width: 50em) {
+        justify-content: center;
+      }
     }
 
     &__icon {
@@ -262,6 +295,16 @@
 
       &:hover {
         transform: translateY(-0.5rem) scale(1.1);
+      }
+
+      @media only screen and (max-width: 62.5em) {
+        img {
+          width: 4rem;
+
+          &:hover {
+            transform: translateY(0) scale(1);
+          }
+        }
       }
     }
   }
@@ -274,9 +317,17 @@
     &:hover {
       color: darken($color-dark, 0.4);
     }
+
+    @media only screen and(max-width : 31.25em) {
+      font-size: 2rem;
+    }
   }
 
   &__coder-love {
     margin-left: 1rem;
+
+    @media only screen and(max-width : 28.125em) {
+      display: none;
+    }
   }
 }
