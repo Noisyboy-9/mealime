@@ -127,10 +127,26 @@
 
 .home-main {
   margin-top: 30rem;
+
+  @media only screen and(max-width: 68.75em) {
+    margin-top: 10rem;
+  }
+
+  @media only screen and(max-width: 62.5em) {
+    margin-top: 0rem;
+  }
+
+  @include response(tab-port) {
+    margin-top: 6rem;
+  }
 }
 
 .section-features {
   padding: 0 4rem;
+
+  @include response(tab-port) {
+    text-align: center;
+  }
 }
 
 .section-pro {
