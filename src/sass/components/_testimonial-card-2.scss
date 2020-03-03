@@ -14,7 +14,6 @@
     height: 26rem;
   }
 
-
   &:hover {
     @include card-hover-effect;
   }
@@ -43,17 +42,17 @@
     text-align: center;
 
     p {
-      font-family: 'Lato-Light';
+      font-family: "Lato-Light";
     }
     &::before {
-      content: url("/public/assets/images/quote-open_icon.svg");
+      content: url("./assets/images/quote-open_icon.svg");
       display: block;
       margin-bottom: 2rem;
       text-align: left;
     }
 
     &::after {
-      content: url("/public/assets/images/quote-close.svg");
+      content: url("./assets/images/quote-close.svg");
       display: block;
       text-align: right;
       margin-top: 2rem;
@@ -66,7 +65,7 @@
 
     span {
       display: block;
-      font-family: 'Montserrat-Regular';
+      font-family: "Montserrat-Regular";
       font-size: 1.8rem;
       color: $color-white;
     }

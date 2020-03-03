@@ -76,10 +76,10 @@
     position: relative;
     &::before {
       @media only screen and (max-width: 28.125em) {
-        content: '';
+        content: "";
       }
 
-      content: url('/public/assets/images/quote-open_icon.svg');
+      content: url("./assets/images/quote-open_icon.svg");
       display: block;
       margin-bottom: 2rem;
       text-align: left;
@@ -87,9 +87,9 @@
 
     &::after {
       @media only screen and (max-width: 28.125em) {
-        content: '';
+        content: "";
       }
-      content: url('/public/assets/images/quote-close.svg');
+      content: url("./assets/images/quote-close.svg");
       display: block;
       text-align: right;
       margin-top: 2rem;

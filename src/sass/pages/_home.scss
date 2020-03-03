@@ -11,11 +11,7 @@
   }
 
   @include response(tab-port) {
-    background: linear-gradient(
-      to right,
-      $color-primary-light,
-      $color-primary-dark
-    );
+    background: linear-gradient(to right, $color-primary-light, $color-primary-dark);
     border-bottom-left-radius: 6.5rem;
     border-bottom-right-radius: 6.5rem;
     height: 80vh;
@@ -188,7 +184,7 @@
   .link {
     font-size: 1.8rem;
     text-decoration: underline;
-    font-family: 'Lato-Light';
+    font-family: "Lato-Light";
 
     &:hover {
       color: darken($color-primary, 20);
@@ -211,7 +207,7 @@
 }
 
 .section-testimonial {
-  background-image: url('/public/assets/images/testimonial__background.png');
+  background-image: url("./assets/images/testimonial__background.png");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 4rem;
