@@ -348,7 +348,8 @@
     background-color: $color-white;
 
     @include response(tab-port) {
-      margin-left: 0rem;
+      margin-left: .5rem;
+      padding: 5rem 8rem 2rem 1rem;
     }
 
     h3 {
@@ -377,6 +378,10 @@
 
       p {
         margin-left: 4rem;
+
+        @include response(tab-port) {
+          margin-left: 2rem;
+        }
       }
 
       .quit {
@@ -463,7 +468,8 @@
 
     @include response(tab-port) {
       &--btn {
-        margin-left: 2rem;
+        margin-left: 1rem;
+
       }
     }
 
@@ -474,6 +480,11 @@
   width: 100%;
   height: 80rem;
   background-color: $color-primary-dark;
+
+  @include response(tab-port) {
+    height: 100rem;
+  }
+
 
   &__container {
     width: 95%;
@@ -496,6 +507,12 @@
   margin-bottom: 5rem;
   position: relative;
 
+  @include response(tab-port) {
+    display: block;
+    text-align: center;
+    margin-bottom: 10rem;
+  }
+
   &:before {
     content: '';
     position: absolute;
@@ -505,6 +522,14 @@
     width: 59rem;
     height: 59rem;
     border-radius: 100%;
+
+    @include response(tab-port) {
+      top: 40rem;
+      right: 50%;
+      transform: translateX(50%);
+      z-index: 1;
+      background-color: transparent;
+    }
   }
 
 
@@ -512,11 +537,17 @@
     justify-self: end;
     margin-right: 14rem;
     margin-top: -2rem;
-    z-index: 222;
+    z-index: 2222;
+
+    @include response(tab-port) {
+      margin-right: 0;
+      margin-top: 10rem;
+    }
 
     img {
       width: 40rem;
       height: 71rem;
+      z-index: 2222;
     }
   }
 

@@ -10,6 +10,10 @@
   padding: 0 1rem;
   transition: 0.3s all ease-in-out;
 
+  @include response(tab-port) {
+    height: 26rem;
+  }
+
   &:hover {
     @include card-hover-effect;
   }
