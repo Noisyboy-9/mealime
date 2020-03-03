@@ -1,23 +1,63 @@
 .hero {
   position: relative;
   height: 100vh;
+  @include response(tab-port) {
+    background: linear-gradient(
+      to right,
+      $color-primary-light,
+      $color-primary-dark
+    );
+    border-bottom-left-radius: 6.5rem;
+    border-bottom-right-radius: 6.5rem;
+    height: 80vh;
 
+    &__background {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 43.75em) {
+    height: 70vh;
+  }
+
+  @media only screen and (max-width: 18.75em) {
+    height: 90vh;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+  }
   &__content {
     padding: 4rem;
     position: absolute;
     top: 20%;
     display: flex;
     justify-content: space-between;
+
+    @media only screen and (max-width: 18.75em) {
+      margin-top: 10rem;
+    }
   }
 
   &__slogan {
     width: 40%;
     animation: move-in-right 0.7s ease-in-out;
+
+    @include response(tab-port) {
+      width: 50%;
+      margin: auto;
+      text-align: center;
+    }
   }
 
   &__icons {
     display: flex;
     flex-direction: row;
+    @media only screen and (max-width: 81.25em) {
+      width: 42rem;
+    }
+
+    @include response(tab-port) {
+      display: none;
+    }
 
     animation: move-in-left 0.7s ease-in-out;
     &--container {
@@ -46,6 +86,7 @@
   &__icon-wrapper {
     width: 13rem;
     height: 13rem;
+
     border-radius: 50%;
     @include absolute-center;
     display: flex;
@@ -70,6 +111,16 @@
     top: 80%;
     left: 60%;
 
+    @media only screen and (max-width: 68.75em) {
+      img {
+        height: 40rem;
+        width: auto;
+      }
+    }
+
+    @media only screen and (max-width: 62.5em) {
+      display: none;
+    }
     animation: move-in-bottom 0.7s ease-in-out;
   }
 }

@@ -1,14 +1,48 @@
 .nav {
+  @include response(tab-port) {
+    &__logo {
+      img {
+        width: 15rem;
+        height: auto;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 18.75em) {
+    &__logo {
+      display: none;
+    }
+  }
+
   &__container {
     padding: 3rem 4rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media only screen and(max-width : 43.75em) {
+      display: block;
+      text-align: center;
+    }
   }
 
   &__list {
     display: flex;
+
+    @media only screen and(max-width : 43.75em) {
+      width: 50%;
+      margin: auto;
+    }
+
+    @media only screen and(max-width : 28.125em) {
+      width: 70%;
+      margin: auto;
+    }
+
+    @media only screen and (max-width: 18.75em) {
+      display: block;
+    }
   }
 
   &__item {
@@ -16,10 +50,18 @@
     position: relative;
     list-style: none;
     font-size: 1.8rem;
+    @media only screen and (max-width: 18.75em) {
+      display: block;
+    }
+
     padding: 0.5rem 0.7rem;
 
     &:not(:last-child) {
       margin-right: 4rem;
+
+      @media only screen and (max-width: 18.75em) {
+        margin-right: 0;
+      }
     }
 
     &::after {
@@ -48,5 +90,10 @@
     color: $color-white;
     letter-spacing: 0.2rem;
     font-family: 'Lato-Light';
+
+    @include response(tab-port) {
+      font-size: 1.4rem;
+      font-family: 'Lato-Bold';
+    }
   }
 }
