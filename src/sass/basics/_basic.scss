@@ -5,7 +5,19 @@
 }
 
 html {
-  font-size: 62.5%;
+  @include response(big-desktop) {
+    font-size: 75%; // 1rem === 12px
+  }
+
+  font-size: 62.5%; // 1rem === 10px
+
+  @include response(tab-land) {
+    font-size: 56.3%; // 1rem === 9px
+  }
+
+  @include response(tan-port) {
+    font-size: 43.8%; // 1rem 7px
+  }
 }
 
 body {
