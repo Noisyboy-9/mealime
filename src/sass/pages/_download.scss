@@ -25,21 +25,36 @@
     line-height: 3rem;
   }
 
-  .google_play_btn {
-    margin-top: 4rem;
-    margin-left: .3rem;
-    display: block;
-    img {
-      width: 27rem;
-      height: 10rem;
-    }
-  }
+
 
   &__phone {
     position: absolute;
     right: 5%;
     top: 20%;
     animation: move-in-left 0.7s ease-in-out;
+
+    img {
+      width: 34.8rem;
+      height: 61.1rem;
+    }
+  }
+}
+
+.google_play_btn {
+  margin-top: 4rem;
+  margin-left: .3rem;
+  display: block;
+
+  img {
+    width: 27rem;
+    height: 10rem;
+    transition: 0.3s all ease-in-out;
+
+    &:hover {
+      @include button-hover-effect;
+      border-radius: 2rem;
+    }
+
   }
 }
 
@@ -114,7 +129,12 @@
       transform: translate(-50%, -50%);
     }
 
-    svg {
+    .countdown, .worker, .apple {
+      width: 10.6rem;
+      height: 10.6rem;
+    }
+
+    .svg {
       position: absolute;
       left: 50%;
       top: 50%;
@@ -188,7 +208,21 @@
         transform: translate(-50%, -50%);
       }
 
-      svg {
+      .list {
+        width: 9rem;
+        height: 9rem;
+      }
+
+      .money, .smile, .time {
+        width: 9rem;
+        height: 10.6rem;
+      }
+
+      .time {
+        margin-left: -.6rem;
+      }
+
+      .svg {
         position: absolute;
         left: 50%;
         top: 50%;
@@ -300,6 +334,11 @@
       p {
         margin-left: 4rem;
       }
+
+      .quit {
+        width: 4rem;
+        height: 4rem;
+      }
     }
 
     &--btn {
@@ -348,7 +387,10 @@
         margin-bottom: 4rem;
       }
 
-      svg {
+      .tick {
+        width: 4rem;
+        height: 4rem;
+
         stroke: $color-white;
         stroke-width: .6rem;
         stroke-dasharray: 2,2;
@@ -386,5 +428,50 @@
   h2 {
     color: $color-white;
     margin-bottom: 4rem;
+  }
+}
+
+.try {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  align-items: center;
+  margin-top: 8rem;
+  margin-bottom: 5rem;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: 5rem;
+    top: 2rem;
+    background-color: $color-primary;
+    width: 59rem;
+    height: 59rem;
+    border-radius: 100%;
+  }
+
+
+  &__phone {
+    justify-self: end;
+    margin-right: 14rem;
+    margin-top: -2rem;
+    z-index: 222;
+
+    img {
+      width: 40rem;
+      height: 71rem;
+    }
+  }
+
+  &__text {
+    margin-left: 5rem;
+    h3 {
+      color: $text-color-gray-1;
+      font-family: "Montserrat-Regular";
+      font-weight: bold;
+      margin-top: 2rem;
+    }
+
   }
 }
