@@ -4,6 +4,7 @@
   border-radius: 0.6rem;
   @include response(tab-port) {
     margin-left: auto;
+    text-align: center;
   }
 
   &:hover {

@@ -194,6 +194,9 @@
 
 .section-conditions {
   padding: 4rem;
+  @include response(tab-port) {
+    text-align: center;
+  }
 }
 
 .footer {
