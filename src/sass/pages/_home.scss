@@ -2,26 +2,44 @@
   position: relative;
   height: 100vh;
 
-  @media only screen and (max-width: 59.375em) {
+  @media only screen and(max-width:68.75em) {
+    height: 80vh;
+  }
+
+  @media only screen and(max-width:62.5em) {
+    height: 70vh;
+  }
+
+  @include response(tab-port) {
     background: linear-gradient(
       to right,
       $color-primary-light,
       $color-primary-dark
     );
+    border-bottom-left-radius: 6.5rem;
+    border-bottom-right-radius: 6.5rem;
     height: 80vh;
-    border-radius: 4rem;
 
-    & img.hero__background {
+    &__background {
       display: none;
     }
   }
 
-  @include response(tab-land) {
+  @media only screen and (max-width: 50em) {
+    height: 50vh;
+  }
+
+  @media only screen and (max-width: 48em) {
+    height: 60vh;
+  }
+  @media only screen and (max-width: 43.75em) {
     height: 70vh;
   }
 
-  @include response(tab-port) {
-    height: 60vh;
+  @media only screen and (max-width: 18.75em) {
+    height: 90vh;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
   }
 
   &__content {
@@ -31,10 +49,8 @@
     display: flex;
     justify-content: space-between;
 
-    @media only screen and (max-width: 59.375em) {
-      position: relative;
-      width: 100%;
-      height: 50%;
+    @media only screen and (max-width: 18.75em) {
+      margin-top: 10rem;
     }
   }
 
@@ -42,18 +58,23 @@
     width: 40%;
     animation: move-in-right 0.7s ease-in-out;
 
-    @media only screen and (max-width: 59.375em) {
+    @include response(tab-port) {
       width: 50%;
       margin: auto;
       text-align: center;
-      @include absolute-center;
-      animation: none;
     }
   }
 
   &__icons {
     display: flex;
     flex-direction: row;
+    @media only screen and (max-width: 81.25em) {
+      width: 42rem;
+    }
+
+    @include response(tab-port) {
+      display: none;
+    }
 
     animation: move-in-left 0.7s ease-in-out;
     &--container {
@@ -63,10 +84,6 @@
       border-radius: 3.4rem;
       transform: matrix(-0.71, 0.69, 0.72, 0.71, 0, 0);
       position: relative;
-
-      @media only screen and (max-width: 59.375em) {
-        display: none;
-      }
 
       &:not(:last-child) {
         margin-right: 10rem;
@@ -80,16 +97,13 @@
     &--text-container {
       margin-top: 3rem;
       margin-left: 4rem;
-
-      @media only screen and (max-width: 59.375em) {
-        display: none;
-      }
     }
   }
 
   &__icon-wrapper {
     width: 13rem;
     height: 13rem;
+
     border-radius: 50%;
     @include absolute-center;
     display: flex;
@@ -114,22 +128,60 @@
     top: 80%;
     left: 60%;
 
+    @media only screen and (max-width: 68.75em) {
+      display: none;
+    }
+
+    @media only screen and (max-width: 62.5em) {
+      display: none;
+    }
     animation: move-in-bottom 0.7s ease-in-out;
   }
 }
 
 .home-main {
-  margin-top: 30rem;
+  @media only screen and (max-width: 100em) {
+    margin-top: 20rem;
+  }
+  @media only screen and (max-width: 93.75em) {
+    margin-top: 5rem;
+  }
+
+  @media only screen and (max-width: 87.5em) {
+    margin-top: 5rem;
+  }
+
+  margin-top: 10rem;
+
+  @media only screen and(max-width: 68.75em) {
+    margin-top: 0rem;
+  }
+
+  @media only screen and(max-width: 62.5em) {
+    margin-top: 0rem;
+  }
+
+  @include response(tab-port) {
+    margin-top: 6rem;
+  }
 }
 
 .section-features {
   padding: 0 4rem;
+
+  @include response(tab-port) {
+    text-align: center;
+  }
 }
 
 .section-pro {
   background-color: $color-primary;
   padding: 4rem;
   border-radius: 6.5rem;
+
+  @include response(tab-port) {
+    text-align: center;
+  }
 }
 
 .section-privacy {
@@ -142,6 +194,10 @@
 
     &:hover {
       color: darken($color-primary, 20);
+    }
+
+    @include response(tab-port) {
+      text-align: center;
     }
   }
 
@@ -157,11 +213,18 @@
 }
 
 .section-testimonial {
-  background-image: url('/public/assets/images/testimonial__background.png');
+  background-image: url('./assets/images/testimonial__background.png');
   background-repeat: no-repeat;
   background-size: cover;
   padding: 4rem;
 
+  @media only screen and (max-width: 50em) {
+    text-align: center;
+  }
+
+  @media only screen and (max-width: 28.125em) {
+    padding: 2rem;
+  }
   &__download-badge {
     & > img {
       width: 25rem;
@@ -171,19 +234,47 @@
 
 .section-conditions {
   padding: 4rem;
+  @include response(tab-port) {
+    text-align: center;
+  }
 }
 
 .footer {
   background-color: lighten($color-primary, 0.8);
+  @include response(tab-land) {
+    &__app-logo {
+      display: none;
+    }
+  }
+
   &__content {
     padding: 4rem;
     display: flex;
     background-color: lighten($color-primary, 0.8);
+
+    @media only screen and (max-width: 50em) {
+      display: block;
+      text-align: center;
+    }
   }
 
   &__logo {
     & > img {
       border-radius: 1rem;
+
+      @include response(tab-land) {
+        height: 25rem;
+        width: auto;
+      }
+
+      @include response(tab-land) {
+        height: 20rem;
+        margin-top: 2rem;
+      }
+
+      @media only screen and (max-width: 50em) {
+        height: 25rem;
+      }
     }
   }
 
@@ -196,6 +287,10 @@
 
   &__nav {
     list-style: none;
+
+    @include response(tab-land) {
+      margin-top: 2rem;
+    }
   }
 
   &__item {
@@ -211,6 +306,10 @@
   &__follow-us {
     &__container {
       display: flex;
+
+      @media only screen and (max-width: 50em) {
+        justify-content: center;
+      }
     }
 
     &__icon {
@@ -221,6 +320,16 @@
 
       &:hover {
         transform: translateY(-0.5rem) scale(1.1);
+      }
+
+      @media only screen and (max-width: 62.5em) {
+        img {
+          width: 4rem;
+
+          &:hover {
+            transform: translateY(0) scale(1);
+          }
+        }
       }
     }
   }
@@ -233,9 +342,17 @@
     &:hover {
       color: darken($color-dark, 0.4);
     }
+
+    @media only screen and(max-width : 31.25em) {
+      font-size: 2rem;
+    }
   }
 
   &__coder-love {
     margin-left: 1rem;
+
+    @media only screen and(max-width : 28.125em) {
+      display: none;
+    }
   }
 }
