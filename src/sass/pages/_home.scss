@@ -11,7 +11,11 @@
   }
 
   @include response(tab-port) {
-    background: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    background: linear-gradient(
+      to right,
+      $color-primary-light,
+      $color-primary-dark
+    );
     border-bottom-left-radius: 6.5rem;
     border-bottom-right-radius: 6.5rem;
     height: 80vh;
@@ -136,16 +140,18 @@
 }
 
 .home-main {
-  margin-top: 30rem;
   @media only screen and (max-width: 100em) {
     margin-top: 20rem;
   }
   @media only screen and (max-width: 93.75em) {
-    margin-top: 15rem;
+    margin-top: 5rem;
   }
+
   @media only screen and (max-width: 87.5em) {
     margin-top: 5rem;
   }
+
+  margin-top: 10rem;
 
   @media only screen and(max-width: 68.75em) {
     margin-top: 0rem;
@@ -184,7 +190,7 @@
   .link {
     font-size: 1.8rem;
     text-decoration: underline;
-    font-family: "Lato-Light";
+    font-family: 'Lato-Light';
 
     &:hover {
       color: darken($color-primary, 20);
@@ -207,7 +213,7 @@
 }
 
 .section-testimonial {
-  background-image: url("./assets/images/testimonial__background.png");
+  background-image: url('./assets/images/testimonial__background.png');
   background-repeat: no-repeat;
   background-size: cover;
   padding: 4rem;
