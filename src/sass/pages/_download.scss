@@ -14,6 +14,25 @@
     height: 110rem;
   }
 
+  @media only screen and(max-width:30.12em) {
+    height: 118rem;
+  }
+
+  @media only screen and(max-width:28.12em) {
+    height: 120rem;
+  }
+  @media only screen and(max-width:28.12em) {
+    height: 130rem;
+  }
+
+  @media only screen and(max-width:20.5em) {
+    height: 140rem;
+  }
+
+  @media only screen and(max-width:20em) {
+    height: 150rem;
+  }
+
   &__content {
     padding-top: 17rem;
     margin-left: 4rem;
@@ -31,7 +50,6 @@
   &__description {
     color: $color-white !important;
     margin-top: 3rem;
-    margin-left: 1rem;
     letter-spacing: 0.15rem;
     line-height: 3rem;
 
@@ -61,6 +79,8 @@
 }
 
 .google_play_btn {
+  width: 27rem;
+  height: 10rem;
   margin-top: 4rem;
   margin-left: .3rem;
   display: block;
@@ -79,6 +99,23 @@
 
   @media only screen and(max-width:43.12em) {
     text-align: center;
+    margin-left: -3rem;
+  }
+
+  @media only screen and(max-width:28.12em) {
+    margin-left: -6rem;
+  }
+
+  @media only screen and(max-width:20.5em) {
+    margin-left: -8rem;
+  }
+}
+
+@media only screen and(max-width:45em) {
+  .google_play_btn_phone {
+    width: 100%;
+    height: 100%;
+    margin: 0;
   }
 }
 
@@ -94,6 +131,10 @@
   position: relative;
   text-align: center;
 
+  @media only screen and(max-width:79.68em) {
+    margin-bottom: 50rem;
+  }
+
   @media only screen and(max-width:47.81em) {
     height: 125rem;
   }
@@ -101,6 +142,28 @@
   @media only screen and(max-width:40.81em) {
     height: 135rem;
     margin-bottom: 60rem;
+  }
+
+  @media only screen and(max-width:28.37em) {
+    height: 145rem;
+    margin-bottom: 70rem;
+  }
+
+  @media only screen and(max-width:22.87em) {
+    height: 155rem;
+
+  }
+
+  @media only screen and(max-width:21.06em) {
+    height: 165rem;
+  }
+
+  @media only screen and(max-width:24.37em) {
+    margin-bottom: 80rem;
+  }
+
+  @media only screen and(max-width:19.81em) {
+    margin-bottom: 88rem;
   }
 
   &__heading {
@@ -187,6 +250,24 @@
     margin-top: 40rem;
   }
 
+  @media only screen and(max-width:37.5em) {
+    margin-bottom: 70rem;
+  }
+
+  @media only screen and(max-width:26.37em) {
+    margin-bottom: 80rem;
+  }
+  @media only screen and(max-width:24em) {
+    margin-bottom: 90rem;
+  }
+  @media only screen and(max-width:21.12em) {
+    margin-bottom: 100rem;
+  }
+
+  @media only screen and(max-width:20.37em) {
+    margin-bottom: 110rem;
+  }
+
   &:before {
     content: '';
     position: absolute;
@@ -211,6 +292,35 @@
     @media only screen and(max-width:44em) {
       width: 70rem;
       height: 70rem;
+    }
+
+    @media only screen and(max-width:37.5em) {
+      width: 100%;
+      border-radius: 0;
+      margin-top: -2rem;
+      height: 160rem;
+    }
+
+    @media only screen and(max-width:35.68em) {
+      height: 170rem;
+    }
+
+    @media only screen and(max-width:31.56em) {
+      height: 180rem;
+    }
+
+    @media only screen and(max-width:26.37em) {
+      height: 190rem;
+    }
+    @media only screen and(max-width:24em) {
+      height: 200rem;
+    }
+    @media only screen and(max-width:21.12em) {
+      height: 210rem;
+    }
+
+    @media only screen and(max-width:20.37em) {
+      height: 220rem;
     }
   }
 
@@ -256,6 +366,13 @@
       margin-left: -15%;
     }
 
+    @media only screen and(max-width:37.5em) {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+
     .description {
       width: 100%;
       padding: .5rem 1.7rem;
@@ -290,7 +407,6 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-
 
       }
 
@@ -331,6 +447,17 @@
         left: 10%;
         top: -5rem;
       }
+
+      @media only screen and(max-width:37.5em) {
+        position: relative;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        top: 0;
+        margin-bottom: 2rem;
+      }
+
     }
     &--2 {
       background-color: $color-white;
@@ -347,6 +474,17 @@
         left: calc(4% + 30rem);
         top: 7rem;
       }
+
+      @media only screen and(max-width:37.5em) {
+        position: relative;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        top: 0;
+        margin-bottom: 2rem;
+      }
+
     }
     &--3 {
       background-color: $color-white;
@@ -363,6 +501,18 @@
         left: calc(4% + 30rem);
         top: 58rem;
       }
+
+      @media only screen and(max-width:37.5em) {
+        position: relative;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        top: 0;
+        margin-bottom: 2rem;
+      }
+
+
     }
     &--4 {
       background-color: $color-white;
@@ -379,6 +529,16 @@
         left: 10%;
         top: 42rem;
       }
+
+      @media only screen and(max-width:37.5em) {
+        position: relative;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        top: 0;
+      }
+
     }
   }
   &__text {
@@ -411,10 +571,11 @@
 
   @media only screen and(max-width:79.68em) {
     &__text {
+      width: 50%;
       position: absolute;
-      top: -80rem;
+      top: -75rem;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translateX(-40%);
 
       h1 {
         font-size: 3.6rem;
@@ -424,6 +585,44 @@
       }
     }
   }
+
+  @media only screen and(max-width:51.5em) {
+    &__text {
+      top: -80rem;
+    }
+  }
+
+  @media only screen and(max-width:40.62em) {
+    &__text {
+      top: -85rem;
+    }
+  }
+
+  @media only screen and(max-width:31.75em) {
+    &__text {
+      top: -90rem;
+    }
+  }
+
+  @media only screen and(max-width:28.06em) {
+    &__text {
+      top: -95rem;
+    }
+  }
+
+  @media only screen and(max-width:24.37em) {
+    &__text {
+      top: -110rem;
+    }
+  }
+
+  @media only screen and(max-width:19.81em) {
+    &__text {
+      top: -120rem;
+    }
+  }
+
+
 }
 
 .plan {
@@ -438,6 +637,7 @@
 
     @media only screen and(max-width:45em) {
       display: block;
+      width: 100%;
     }
 
   }
@@ -458,24 +658,29 @@
 
     @include response(tab-land) {
       //margin-left: 50rem;
-      margin-left: 10%;
+      margin-left: 9%;
     }
 
-    @media only screen and(max-width:68.12em) {
+    @media only screen and(max-width:68.75em) {
       margin-left: 7%;
     }
 
-    @media only screen and(max-width:59.37em) {
-      margin-left: 3%;
+    @media only screen and(max-width:65.87em) {
+      margin-left: 5%;
     }
 
-    @media only screen and(max-width:63.98em) {
-      padding-right: 10rem;
+    @media only screen and(max-width:62.93em) {
+      margin-left: 4%;
     }
 
-    @media only screen and(max-width:51.25em) {
-      margin-left: 1%;
+    @media only screen and(max-width:61.87em) {
+      margin-left: 2%;
     }
+
+    @media only screen and(max-width:60em) {
+      margin-left: 0;
+    }
+
 
 
     h3 {
@@ -525,10 +730,10 @@
     }
 
     @media only screen and(max-width:45em) {
-      width: 65rem;
-      height: 73rem;
-      margin-left: auto;
-      margin-right: auto;
+      width: 100%;
+      height: 100%;
+      margin-left: 0;
+      margin-right: 0;
 
       h3 {
         font-size: 3.6rem;
@@ -539,7 +744,8 @@
       }
 
       &--btn {
-        margin-left: 17rem;
+        margin-left: 0;
+        text-align: center;
         a {
           font-size: 2.9rem;
         }
@@ -616,10 +822,10 @@
     }
 
     @media only screen and(max-width:45em) {
-      width: 65rem;
-      height: 88rem;
-      margin-left: auto;
-      margin-right: auto;
+      width: 100%;
+      height: 100%;
+      margin-left: 0;
+      margin-right: 0;
 
       h3 {
         font-size: 3.6rem;
@@ -630,9 +836,14 @@
       }
 
       .plan__free--btn {
-        margin-left: 10rem !important;
+        margin-left: 0;
+        text-align: center;
         a {
           font-size: 2.9rem;
+        }
+
+        .btn--white {
+          padding: 1rem 2rem;
         }
       }
     }
@@ -657,6 +868,11 @@
     width: 95%;
     margin: 0 auto;
     padding-top: 3rem;
+
+    @media only screen and(max-width:43.75em) {
+      width: 100%;
+      margin: 0;
+    }
   }
 
   h2 {
@@ -706,8 +922,24 @@
       right: 1rem;
     }
 
-    @media only screen and(max-width:50em) {
-      right: -8rem;
+    @media only screen and(max-width:51.93em) {
+      right: -4rem;
+    }
+
+    @media only screen and(max-width:50.06em) {
+      right: -6rem;
+    }
+
+    @media only screen and(max-width:51.93em) {
+      right: -5rem;
+    }
+
+    @media only screen and(max-width:48.81em) {
+      right: -10rem;
+    }
+
+    @media only screen and(max-width:46.43em) {
+      right: -12rem;
     }
 
     @media only screen and(max-width:45em) {
@@ -730,8 +962,12 @@
     }
 
     @media only screen and(max-width:45em) {
-      margin-top: 9rem;
-      margin-right: 12rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media only screen and(max-width:21.25em) {
+      display: none;
     }
 
 
@@ -753,6 +989,7 @@
 
     @media only screen and(max-width:45em) {
       margin-left: 0;
+      margin-bottom: 9rem;
     }
 
   }
